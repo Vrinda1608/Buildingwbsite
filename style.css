@@ -1,0 +1,480 @@
+/* Hero Section Container */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    background: url(images/1.jpg_2.jpeg) no-repeat center center/cover;
+    overflow: hidden;
+}
+
+/* Dark Overlay to make text pop */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Adjust transparency here */
+    z-index: 1;
+}
+
+/* Ensure content stays above the overlay */
+.navbar, .hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Vertical centering for the hero text */
+.hero-content {
+    height: calc(100vh - 100px); /* Adjusting for navbar height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Customizing the Navbar Menu Container */
+.collapse.navbar-collapse {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Customizing the Nav List */
+.navbar-nav {
+    gap: 0;
+    display: flex;
+    align-items: center;
+}
+
+/* Customizing Nav Items */
+.nav-item {
+    position: relative;
+}
+
+/* Customizing the Navbar links */
+.nav-link {
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-left: 15px;
+    padding: 8px 0 !important;
+    color: #f0ecec !important;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+}
+
+/* Hover Effect - Underline Animation */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #ffb400;
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Hover Color Change */
+.nav-link:hover {
+    color: #07140d !important;
+}
+
+/* Custom Button Styling */
+.btn-warning {
+    background-color: #ffb400;
+    border: none;
+    font-size: 0.9rem;
+}
+
+.btn-warning:hover {
+    background-color: hwb(63 21% 2% / 0.971);
+}
+
+/* --------------------------------------------------*/
+
+/* Section Typography */
+
+.section-title {
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: hsl(0, 0%, 20%);
+    margin-bottom: 15px;
+}
+
+.section-subtitle {
+    max-width: 600px;
+    color: black;
+    line-height: 1.6;
+}
+
+/* Filter Navigation */
+.filter-nav {
+    list-style: none;
+    padding: 0;
+}
+
+.filter-nav .nav-link {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+    padding: 0 15px;
+}
+
+.filter-nav .nav-link:hover, 
+.filter-nav .nav-link.active {
+    color: hwb(45 3% 0%); /* Or your preferred brand color */
+}
+
+.filter-nav .separator {
+    color: hsl(56, 80%, 59%);
+    display: flex;
+    align-items: center;
+}
+
+/* Portfolio Item Styling */
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px; /* Optional: adds rounded corners */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+.portfolio-item img {
+    transition: transform 0.5s ease;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Hover Effect: Zoom image */
+.portfolio-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Optional Overlay Effect */
+.portfolio-item::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: hwb(60 92% 7% / 0.215);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.portfolio-item:hover::after {
+    opacity: 1;
+}
+
+/* Services Section Styles */
+.services-section {
+    background-color: #ffffff;
+    padding: 80px 0;
+}
+
+/* Header Typography */
+.services-section h2 {
+    color: #333;
+    font-size: 2.5rem;
+}
+
+.services-section p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Service Item Styling */
+.service-item h4 {
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Icon Container */
+.service-icon img {
+    width: 60px; /* Adjust size based on your icons */
+    height: auto;
+    /* If using SVG icons, you can apply a yellow filter here if needed */
+    filter: drop-shadow(0px 0px 1px #ffb400); 
+}
+
+
+/* -------------------------------------------------- */
+
+/* Progress Bar Customization */
+.skill-name {
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.skill-value {
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+
+.progress {
+    height: 6px;
+    background-color: #f0f0f0;
+    border-radius: 0;
+    overflow: visible;
+}
+
+.progress-bar {
+    background-color: #f39c12; /* Golden/Yellow color */
+    border-radius: 0;
+}
+
+/* Yellow CTA Section */
+.cta-bar {
+    background-color: #f1b400; /* Bright yellow from image */
+}
+
+.cta-bar h3 {
+    font-weight: 400;
+    font-size: 1.75rem;
+}
+
+.cta-bar .btn-outline-light {
+    border-width: 1px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.cta-bar .btn-outline-light:hover {
+    background-color: white;
+    color: #f1b400;
+}
+
+/* ----------------------------------------------------------------------------*/
+
+.section-heading {
+    font-weight: 500;
+    font-size: 2.2rem;
+    line-height: 1.2;
+}
+
+.sub-text {
+    line-height: 1.8;
+    font-size: 0.95rem;
+}
+
+/* Progress Bars Custom Styling */
+.skill-label, .skill-percent {
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.progress-container {
+    height: 4px;
+    background-color: #f0f0f0;
+    width: 100%;
+    position: relative;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: #f39c12; /* Golden Yellow */
+}
+
+/* Yellow CTA Bar */
+.cta-yellow-bar {
+    background-color: #f1b400;
+}
+
+.cta-text {
+    font-weight: 400;
+    font-size: 1.6rem;
+}
+
+.btn-quote-outline {
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 50px;
+    padding: 10px 30px;
+    font-weight: 600;
+    font-size: 0.8rem;
+    transition: 0.3s;
+}
+
+.btn-quote-outline:hover {
+    background-color: #fff;
+    color: #f1b400;
+}
+
+/* Testimonials Styling */
+.section-title {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.section-subtitle {
+    color: #888;
+    max-width: 600px;
+}
+
+.testimonial-body {
+    font-style: italic;
+    color: #777;
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.client-name {
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin-top: 15px;
+}
+
+.testimonial-img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+}
+
+/*----------------------------------------------------------------------------------------*/
+
+.container-error {
+    max-width: 600px;
+    padding: 20px;
+}
+
+/* The Gray Circle Icon */
+.error-icon-circle {
+    width: 60px;
+    height: 60px;
+    background-color: #80868b; /* Medium gray */
+    color: white;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.exclamation-mark {
+    line-height: 1;
+}
+
+/* Text Styling */
+.error-heading {
+    font-size: 1.75rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.error-subtext {
+    font-size: 0.9rem;
+    color: #70757a;
+    line-height: 1.5;
+}
+
+/*----------------------------------------------------------------------------------------------------*/
+
+.contact-info-section {
+    padding: 80px 0;
+    border-bottom: 2px solid #eee;
+}
+
+/* Icon Styling */
+.icon-yellow {
+    font-size: 40px;
+    color: #f7b500; /* Matching the yellow in your image */
+    margin-bottom: 20px;
+}
+
+/* Text Styling */
+.info-box h3 {
+    font-size: 18px;
+    text-transform: capitalize;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.info-box p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Footer Bottom Styling */
+.footer-bottom {
+    padding: 30px 0;
+    font-size: 18px;
+}
+
+.social-links a {
+    color: #888;
+    margin-left: 20px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    color: #f7b500;
+    
+}
+
+/*----------------------------------------------------------------------------------------------------*/
+
+/* Navigation Menu Row Styling */
+.navbar .row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0;
+}
+
+.navbar .row .col-md {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar .row .col-md a {
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #ffffff !important;
+    text-decoration: none;
+    padding: 8px 20px;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+}
+
+/* Underline animation on hover */
+.navbar .row .col-md a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #ffb400;
+    transition: width 0.3s ease-in-out;
+}
+
+.navbar .row .col-md a:hover::after {
+    width: 100%;
+}
+
+.navbar .row .col-md a:hover {
+    color: #ffb400 !important;
+}
