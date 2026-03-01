@@ -3,7 +3,7 @@
     position: relative;
     height: 100vh;
     min-height: 600px;
-    background: url("1.jg.jpeg") no-repeat center center/cover;
+    background: url("1.jpg_2.jpeg") no-repeat center center/cover;
     overflow: hidden;
 }
 
@@ -479,4 +479,5 @@
     color: #ffb400 !important;
 
 }
+
 
